@@ -14,11 +14,9 @@ namespace Calculator
         {
             try
             {
-                var stuffToCalculate = input.Split("+")
-                    .Select(int.Parse).ToArray();
-
-                return stuffToCalculate.Sum();
-
+                return input.Split("+")
+                    .Select(int.Parse)
+                    .ToArray().Sum();
             }
             catch(FormatException)
             {
